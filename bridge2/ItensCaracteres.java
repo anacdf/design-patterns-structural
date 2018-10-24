@@ -1,8 +1,11 @@
 package bridge2;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ItensCaracteres extends AbstracaoImpressao {
+    private ListaImpl lista;
+    private List<String> letras;
 
     public ItensCaracteres(ListaImpl lista) {
         super(lista);
@@ -10,7 +13,12 @@ public class ItensCaracteres extends AbstracaoImpressao {
 
     @Override
     public void imprimeItens() {
-        System.out.println("Apenas caracteres: ");
-        lista.imprimir();
-    }
+        letras = Arrays.asList("a","b","c","d","e");
+
+        System.out.println("letras: ");
+               for(int j=0; j<letras.size(); j++) {
+                   System.out.print(letras.get(j).toString() + " ");
+                   lista.imprimir();
+               }
+        }
 }

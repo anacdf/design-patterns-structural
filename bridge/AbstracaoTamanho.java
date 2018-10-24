@@ -1,7 +1,9 @@
 package bridge;
 
 public abstract class AbstracaoTamanho {
+
     protected ImplementacaoRefrigerante refrigerante;
+
     public AbstracaoTamanho(ImplementacaoRefrigerante refrigerante) {
         this.refrigerante = refrigerante;
     }

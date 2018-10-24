@@ -8,12 +8,12 @@ import java.util.List;
 
 public class ListaOrdenada implements ListaImpl {
         private LinkedList<String> lista;
-        private List<String> listaordenada;
 
 
     public ListaOrdenada(){
         lista = new LinkedList();
     }
+
     @Override
     public void adicionar(String s) {
         lista.add(s);
