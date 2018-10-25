@@ -1,7 +1,6 @@
 package adapter2;
 
 import java.util.List;
-
 public class SomadorExistente {
     public int somaLista(List<Integer> lista) {
         int resultado = 0;
