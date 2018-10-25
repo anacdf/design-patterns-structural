@@ -1,11 +1,12 @@
 package adapter2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter implements SomadorEsperado{
 
    private SomadorExistente adaptee;
-   List<Integer> lista;
+
 
    public Adapter (SomadorExistente somador){
        this.adaptee = somador;
@@ -13,7 +14,8 @@ public class Adapter implements SomadorEsperado{
 
     @Override
     public int somaVetor(int[] vetor) {
-        for (int i=0; i<=vetor.length; i++){
+        ArrayList<Integer> lista = new ArrayList<>();
+        for (int i=0; i<vetor.length; i++){
          lista.add(vetor[i]);
         }
         return adaptee.somaLista(lista);
