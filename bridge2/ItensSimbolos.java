@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ItensSimbolos extends AbstracaoImpressao {
-    private ListaImpl lista;
     private List<String> simbolos;
 
     public ItensSimbolos(ListaImpl lista) {

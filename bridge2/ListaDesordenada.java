@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaDesordenada implements ListaImpl {
-    ArrayList<String> lista;
-    List<String> listadesordenada;
+    private ArrayList<String> lista;
+    private int i=0;
 
 
     public ListaDesordenada(){
@@ -21,6 +21,8 @@ public class ListaDesordenada implements ListaImpl {
 
     @Override
     public void imprimir() {
-        lista.stream().unordered().forEach(s -> System.out.println("item sem ordem: "+s));
+        System.out.println(lista.get(i));
+        i=i+1;
+        if(i==5)i=0;
     }
 }

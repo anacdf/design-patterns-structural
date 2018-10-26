@@ -8,6 +8,7 @@ import java.util.List;
 
 public class ListaOrdenada implements ListaImpl {
         private LinkedList<String> lista;
+        private int i=0;
 
 
     public ListaOrdenada(){
@@ -16,11 +17,15 @@ public class ListaOrdenada implements ListaImpl {
 
     @Override
     public void adicionar(String s) {
+
         lista.add(s);
+        lista.sort(String::compareTo);
     }
 
     @Override
     public void imprimir() {
-        lista.stream().sorted().forEachOrdered(s -> System.out.println("item ordenado: "+s));
+        System.out.println(lista.get(i));
+        i=i+1;
+        if(i==5)i=0;
     }
 }

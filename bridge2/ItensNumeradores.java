@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ItensNumeradores extends AbstracaoImpressao {
-    private ListaImpl lista;
     private List<Integer> numeros;
 
     public ItensNumeradores(ListaImpl lista) {
@@ -13,12 +12,12 @@ public class ItensNumeradores extends AbstracaoImpressao {
 
     @Override
     public void imprimeItens() {
-        System.out.println("Apenas numeros: ");
         numeros = Arrays.asList(1,2,3,4,5);
 
-            for(int i=0; i<numeros.size(); i++){
-                System.out.print(numeros.get(i).toString() + " ");
-                lista.imprimir();
-            }
+        System.out.println("numeros: ");
+        for(int j=0; j<numeros.size(); j++) {
+            System.out.print(numeros.get(j).toString() + " ");
+            lista.imprimir();
+        }
     }
 }

@@ -15,5 +15,12 @@ public class Programa {
 
         AbstracaoImpressao impressaoLetras = new ItensCaracteres(listaOrdenada);
         impressaoLetras.imprimeItens();
+
+        AbstracaoImpressao impressaoNumeros = new ItensNumeradores(listaOrdenada);
+        impressaoNumeros.imprimeItens();
+
+        AbstracaoImpressao impressaoSimbolo = new ItensSimbolos(listaOrdenada);
+        impressaoSimbolo.imprimeItens();
+
     }
 }
