@@ -7,13 +7,16 @@ public class ArquivoComposite extends ArquivoComponent{
     private String nomeArquivo;
     private ArrayList<ArquivoComponent> arquivos = new ArrayList<>();
 
+
     public ArquivoComposite(String nomeArquivo) {
+        super(nomeArquivo);
         this.nomeArquivo = nomeArquivo;
+
     }
 
     @Override
     public void printNomeArquivo() {
-        System.out.println(this.nomeArquivo);
+        System.out.println(nomeArquivo);
         for (ArquivoComponent arquivoTmp : arquivos) {
             arquivoTmp.printNomeArquivo();
         }
@@ -21,7 +24,7 @@ public class ArquivoComposite extends ArquivoComponent{
 
     @Override
     public void adicionar(ArquivoComponent arquivo) {
-        this.arquivos.add(arquivo);
+        arquivos.add(arquivo);
     }
 
     @Override

@@ -1,9 +1,23 @@
 package adapter2;
 
-public class Adapter implements SomadorEsperado {
+import java.util.ArrayList;
+
+public class Adapter implements SomadorEsperado{
+
+    private SomadorExistente adaptee;
+
+
+    public Adapter (SomadorExistente somador){
+        this.adaptee = somador;
+    }
 
     @Override
     public int somaVetor(int[] vetor) {
-        return 0;
+        ArrayList<Integer> lista = new ArrayList<>();
+        for (int i=0; i<vetor.length; i++){
+            lista.add(vetor[i]);
+        }
+        return adaptee.somaLista(lista);
     }
+
 }

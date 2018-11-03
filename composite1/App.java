@@ -12,6 +12,5 @@ public class App {
         pasta.adicionar(video);
         pasta.printNomeArquivo();
 
-        //https://brizeno.wordpress.com/category/padroes-de-projeto/composite/
     }
 }

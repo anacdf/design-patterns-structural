@@ -3,6 +3,10 @@ package composite1;
 public abstract class ArquivoComponent {
     private String nomeArquivo;
 
+    public ArquivoComponent(String nomeArquivo){
+        this.nomeArquivo=nomeArquivo;
+    }
+
     //acoes apenas para arquivos
     public void printNomeArquivo(){
         System.out.println(this.nomeArquivo);

@@ -4,6 +4,7 @@ public class ArquivoImagem extends ArquivoComponent {
     private String nomeArquivo;
 
     public ArquivoImagem(String nomeArquivo) {
-        this.nomeArquivo = nomeArquivo;
+        super(nomeArquivo);
+
     }
 }
